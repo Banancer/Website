@@ -1,0 +1,104 @@
+body {
+  color: rgb(0, 0, 0);
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(139, 229, 140);
+}
+
+.scrolling-bar {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px, 0px;
+}
+.scrolling-text {
+  font-size: 40px;
+  color: white;
+  padding-left: 100%;
+  display: inline-block;
+  animation: scroll 4s linear infinite;
+}
+.scrolling-img {
+  padding-left: 100%;
+  width: 200px;
+  display: inline-block;
+  animation: scroll 4s linear infinite;
+}
+.scrolling-button {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 4s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+a {
+  background-color: rgb(234, 92, 92);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 5px;
+  transition-duration: 0.2s;
+}
+a:hover {
+  font-size: x-large;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bounce,
+.bounceFAST {
+  transform-origin: bottom center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.doh {
+  height: 200px;
+  width: 150px;
+}
+.bart {
+  height: 150px;
+  width: 85px;
+  padding: 5px;
+}
+
+.bounce {
+  animation-name: squish;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.bounceFAST {
+  animation-name: squish;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes squish {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.75);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
