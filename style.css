@@ -91,6 +91,36 @@ a:hover {
   animation-iteration-count: infinite;
 }
 
+.overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  animation: fall 2s ease-in-out infinite;
+}
+
+#overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  animation: fall 2s ease-in-out infinite;
+}
+
+#overlay,
+#overlay-wrapper #overlay {
+  height: 300px;
+  width: auto;
+  animation: spin 2s linear infinite;
+}
+
+.overlay-wrapper img {
+  height: 300px;
+  width: auto;
+  animation: spin 2s linear infinite;
+}
+
 @keyframes squish {
   0% {
     transform: scaleY(1);
@@ -100,5 +130,22 @@ a:hover {
   }
   100% {
     transform: scaleY(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(100%);
   }
 }
